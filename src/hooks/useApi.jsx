@@ -5,8 +5,7 @@ import { toast } from 'react-hot-toast'
 export const useApi = () => {
 
     const api = axios.create({
-        baseURL: 'http://localhost:8000/api',
-        // baseURL: 'https://mup-api.onrender.com', // Your API base URL
+        baseURL: import.meta.env.VITE_BASE_URL,
         withCredentials: true
     })
 
